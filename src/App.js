@@ -146,25 +146,7 @@ function App() {
   
   return (
     <>
-      <BackgroundContainer />
-
-      <Personal userId={userId} />
-
-      <Balance
-        isVisible={activeIndex === 0}
-        balanceAmount={balanceAmount}
-        invitedBonus={invitedBonus}
-        setBalanceAmount={setBalanceAmount}
-        balanceLoading={balanceLoading}
-      />
-      {activeIndex === 0 && <Coin onClick={handleClick} />}
-
-      {activeIndex === 1 && <Tasks balanceAmount={balanceAmount} setBalanceAmount={setBalanceAmount} />}
-
-      {activeIndex === 2 && <Invite userId={userId} invitedBonus={invitedBonus} />}
-      {activeIndex === 2 && <Friends userId={userId} invitedBonus={invitedBonus} setInvitedBonus={setInvitedBonus} />}
-
-      {activeIndex === 3 && <Wallet />}
+      
 
       <NavBar onNavClick={handleNavBarClick} activeIndex={activeIndex} />
       {clicks.map((click) => (
